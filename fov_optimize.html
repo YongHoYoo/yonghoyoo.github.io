@@ -1,0 +1,76 @@
+<section style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px;">
+  <h1 style="color: #2c3e50;">SMT Inspection Equipment Path Optimization</h1>
+  <p><strong>Research on minimizing inspection time for SMT (Surface-Mount Technology) equipment</strong></p>
+
+  <h2 style="color: #34495e;">Problem Overview</h2>
+  <p>
+    SMT inspection equipment optically inspects objects (pads, components, etc.) placed on a PCB.  
+    The system uses multiple <strong>Fields of View (FOVs)</strong>, and every component within each FOV must be inspected.
+  </p>
+  <ul>
+    <li><strong>Minimize the number of FOVs</strong> – Avoid redundant imaging.</li>
+    <li><strong>Optimize the inspection path</strong> – Reduce total inspection time.</li>
+  </ul>
+
+  <h2 style="color: #34495e;">Mathematical Formulation</h2>
+  <ul>
+    <li><strong>FOV Selection → Set Cover Problem:</strong> Each FOV covers multiple components. Goal: smallest set of FOVs that covers all components.</li>
+    <li><strong>Path Optimization → TSP Variant:</strong> 
+      <ul>
+        <li>Standard TSP: Visit all nodes and return to the start.</li>
+        <li>Variant: Fixed start, free end (no return required).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 style="color: #34495e;">Approach</h2>
+  <ul>
+    <li>Heuristic methods: Greedy, 2-opt, Simulated Annealing.</li>
+    <li>Learning-based methods:
+      <ul>
+        <li>Transformer model for path prediction.</li>
+        <li>Beam Search & Monte Carlo Tree Search (MCTS) for improved sequence generation.</li>
+      </ul>
+    </li>
+    <li>Simulation & Evaluation: Python, NumPy, Pandas, Plotly.</li>
+    <li>Performance comparison between heuristic and Transformer-based approaches.</li>
+  </ul>
+
+  <h2 style="color: #34495e;">What Made This Problem Special</h2>
+  <p>
+    Unlike a standard TSP, this was a <strong>complex constraint optimization problem</strong>:
+  </p>
+  <ul>
+    <li>Probe movement speed and acceleration limits.</li>
+    <li>FOV-specific imaging time (image count & FPS).</li>
+    <li>3D reconstruction and inspection time per component.</li>
+    <li>Multi-threaded inspection with thread allocation limits.</li>
+    <li>Memory constraints during execution.</li>
+  </ul>
+  <p>
+    This required combining <strong>route optimization, scheduling, and hardware-aware constraints</strong> into one integrated solution.
+  </p>
+
+  <h2 style="color: #34495e;">Results</h2>
+  <ul>
+    <li>Significant reduction in inspection time.</li>
+    <li>Reduced number of required FOVs.</li>
+    <li>Improved productivity without hardware changes.</li>
+    <li>Clear performance gains over traditional heuristics.</li>
+  </ul>
+
+  <h2 style="color: #34495e;">Visualizations</h2>
+  <p><em>Example figures you could add:</em></p>
+  <ol>
+    <li>Set Cover Diagram – Components covered by different FOVs.</li>
+    <li>Path Optimization Before/After – Route comparison map.</li>
+    <li>System Constraints Diagram – Speed, acceleration, imaging time, threads, memory.</li>
+    <li>Performance Chart – Method comparison.</li>
+  </ol>
+
+  <!-- Placeholder Images -->
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 10px;">
+    <img src="images/set_cover_example.png" alt="Set Cover Example" style="width: 45%; border: 1px solid #ccc;">
+    <img src="images/path_optimization.png" alt="Path Optimization" style="width: 45%; border: 1px solid #ccc;">
+  </div>
+</section>
