@@ -1,41 +1,85 @@
+/* Import a modern Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 40px;
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.7;
+  margin: 20px;
   color: #222;
+  background: #f9f9fb;
 }
 
+/* Header styling */
 header h1 {
   margin-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111;
 }
 
 header p {
   margin-top: 0;
-  font-size: 14px;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 hr {
   border: none;
   height: 1px;
-  background: #aaa;
-  margin: 15px 0;
+  background: #ddd;
+  margin: 20px 0;
 }
 
+/* Info block grid */
 .info-block {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 20px;
-  margin-bottom: 30px;
+  grid-template-columns: 220px 1fr;
+  gap: 25px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.info-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Left column */
 .left h2 {
   margin: 0;
   border-left: 4px solid #c00;
-  padding-left: 10px;
-  font-size: 18px;
+  padding-left: 12px;
+  font-size: 1rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #c00;
 }
 
+/* Right column */
 .right p {
   margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 768px) {
+  .info-block {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .left h2 {
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
 }
