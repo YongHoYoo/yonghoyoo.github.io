@@ -1,38 +1,4 @@
-/* style.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #fff8f8;
-    color: #333;
-}
-
-header {
-    background-color: tomato;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-header p a {
-    color: white;
-    text-decoration: underline;
-}
-
-hr {
-    border: none;
-    height: 2px;
-    background-color: #ff6347; /* tomato 계열 */
-    margin: 10px 0;
-}
-
+/* 기존 스타일 유지 */
 .info-block {
     display: flex;
     flex-wrap: wrap;
@@ -40,6 +6,7 @@ hr {
     border-bottom: 1px solid #ff6347;
 }
 
+/* 좌측 제목 영역 */
 .info-block .left {
     flex: 1 1 150px;
     min-width: 120px;
@@ -47,39 +14,25 @@ hr {
     color: tomato;
 }
 
+/* 우측 내용 영역 */
 .info-block .right {
     flex: 3 1 300px;
 }
 
-.info-block h2 {
-    margin-top: 0;
-}
-
-.info-block ul {
-    padding-left: 20px;
-    margin-top: 5px;
-}
-
-.info-block li {
-    margin-bottom: 5px;
-}
-
-/* Responsive adjustments */
+/* 반응형: 모바일에서 겹치지 않도록 */
 @media (max-width: 768px) {
     .info-block {
-        flex-direction: column;
+        flex-direction: column; /* 좌우 -> 상하 */
+        padding: 15px;
     }
 
-    .info-block .left, .info-block .right {
+    .info-block .left {
+        flex: 1 1 100%;
+        margin-bottom: 10px; /* 제목과 내용 사이 여백 */
+        font-size: 1.2em; /* 제목 글씨 조금 키움 */
+    }
+
+    .info-block .right {
         flex: 1 1 100%;
     }
-}
-
-/* Links styling */
-a {
-    color: tomato;
-}
-
-a:hover {
-    text-decoration: none;
 }
