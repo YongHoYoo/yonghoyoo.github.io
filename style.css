@@ -1,85 +1,85 @@
-/* Import a modern Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/* style.css */
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
-  line-height: 1.7;
-  margin: 20px;
-  color: #222;
-  background: #f9f9fb;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff8f8;
+    color: #333;
 }
 
-/* Header styling */
+header {
+    background-color: tomato;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
 header h1 {
-  margin-bottom: 5px;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #111;
+    margin: 0;
+    font-size: 2em;
 }
 
-header p {
-  margin-top: 0;
-  font-size: 0.95rem;
-  color: #555;
+header p a {
+    color: white;
+    text-decoration: underline;
 }
 
 hr {
-  border: none;
-  height: 1px;
-  background: #ddd;
-  margin: 20px 0;
+    border: none;
+    height: 2px;
+    background-color: #ff6347; /* tomato 계열 */
+    margin: 10px 0;
 }
 
-/* Info block grid */
 .info-block {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 25px;
-  margin-bottom: 40px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-bottom: 1px solid #ff6347;
 }
 
-.info-block:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+.info-block .left {
+    flex: 1 1 150px;
+    min-width: 120px;
+    font-weight: bold;
+    color: tomato;
 }
 
-/* Left column */
-.left h2 {
-  margin: 0;
-  border-left: 4px solid #c00;
-  padding-left: 12px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #c00;
+.info-block .right {
+    flex: 3 1 300px;
 }
 
-/* Right column */
-.right p {
-  margin: 0 0 15px 0;
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
+.info-block h2 {
+    margin-top: 0;
 }
 
-/* Mobile responsive tweaks */
+.info-block ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.info-block li {
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .info-block {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 15px;
-  }
+    .info-block {
+        flex-direction: column;
+    }
 
-  .left h2 {
-    font-size: 0.9rem;
-  }
+    .info-block .left, .info-block .right {
+        flex: 1 1 100%;
+    }
+}
 
-  header h1 {
-    font-size: 1.5rem;
-  }
+/* Links styling */
+a {
+    color: tomato;
+}
+
+a:hover {
+    text-decoration: none;
 }
