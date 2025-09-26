@@ -35,38 +35,31 @@ hr {
   margin: 1em 0 2em 0;
 }
 
-/* 섹션 레이아웃 */
+/* 섹션 레이아웃 (위/아래 구조로 변경) */
 .info-block {
-  display: flex;
-  margin-bottom: 2em;
-  align-items: flex-start;
-}
-
-/* 왼쪽 제목 */
-.left {
-  width: 20%;
-  font-weight: bold;
-  text-align: right;
-  padding-right: 1em;
-  font-size: 1.1em;
-}
-
-/* 오른쪽 콘텐츠 카드 */
-.right {
-  width: 75%;
-  background-color: #fff;  /* 흰색 카드 배경 */
+  max-width: 900px; /* 콘텐츠 폭 제한 */
+  margin: 2em auto; /* 중앙 정렬 */
   padding: 1em 1.5em;
+  background-color: #fff; /* 흰색 카드 배경 */
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* 경험/경력 카드 */
+/* 섹션 제목 */
+.info-block h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.3em;
+}
+
+/* experience-card */
 .experience-card {
-  margin-bottom: 1em;
+  margin: 1em 0;
   padding: 1em;
   border-left: 4px solid #007bff;
-  background-color: #fff;  /* 흰색 카드 배경 */
   border-radius: 5px;
+  background-color: #fff;
 }
 
 /* 목록 스타일 */
@@ -75,11 +68,6 @@ ul {
 }
 
 li {
-  margin-bottom: 0.5em;
-}
-
-/* 섹션 제목 */
-h2 {
   margin-bottom: 0.5em;
 }
 
